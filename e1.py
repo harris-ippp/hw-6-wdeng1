@@ -4,6 +4,8 @@ election_id = "http://historical.elections.virginia.gov/elections/search/year_fr
 resp = requests.get(election_id)
 soup = bs(resp.content , "html.parser")
 ID = soup.find_all("tr", "election_item")
-for row in ID:
-    print(row.find("td", "year first").string)
-    print(row.get("id").replace("election-id-", ""))
+with open("ELECTION_ID", "w") as out:
+    for row in ID:
+        v1 = row.find("td", "year first").string
+        v2 = row.get("id").replace("election-id-", "")
+        out.write("{} {}\n".format(v1, v2))
