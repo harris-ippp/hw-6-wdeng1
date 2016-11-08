@@ -19,4 +19,5 @@ for line in open("ELECTION_ID"):
     elections.append(df[["Democratic", "Republican", "Total Votes Cast", "Year"]])
 
 all = pd.concat(elections)
-df.to_csv("county.csv")
+sort = all.sort_values(by = 'Year', ascending = True)
+sort.to_csv("county.csv")
