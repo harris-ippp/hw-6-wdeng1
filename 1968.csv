@@ -1,699 +1,137 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml" version="XHTML+RDFa 1.0" dir="ltr" lang="en-US" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml" class="no-js">
-
-<head prefix="og: http://ogp.me/ns# website: http://ogp.me/ns/apps/website#">
-    
-    
-	<title>Virginia Elections Database</title>
-    
-    
-	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:site" content="@vaELECT" />
-	<meta name="twitter:title" content="Virginia Elections Database" />
-	<meta name="twitter:description" content="Election results and vote counts for  Virginia federal, state, and county candidates for office, plus past Virginia ballot questions." />
-	<meta name="twitter:image" content="http://historical.elections.virginia.gov/img/us_states/VA/share_thumbnail.png" />
-	<meta property="fb:app_id" content="270866949612579" />
-	<meta property="fb:admins" content="533737006" />
-	<meta property="og:url" content="http://historical.elections.virginia.gov/elections/download/%7B%7D/precincts_include:0/" />
-	<meta property="og:type" content="website" />
-	<meta property="og:image" content="http://historical.elections.virginia.gov/img/us_states/VA/share_thumbnail.png" />
-	<meta property="og:site_name" content="Virginia Elections Database" />
-	<meta property="og:title" content="Virginia Elections Database" />
-	<meta name="description" content="Election results and vote counts for  Virginia federal, state, and county candidates for office, plus past Virginia ballot questions." />
-	<meta name="keywords" content="Virginia, elections, results, politics, database, votes, vote counts, ballot questions, data, statistics, stats, historical, candidates, governor, senator, representative, officials, government, campaign" />
-	<meta property="og:description" content="Election results and vote counts for  Virginia federal, state, and county candidates for office, plus past Virginia ballot questions." />
-	<meta http-equiv="X-UA-Compatible" content="IE=Edge">    
-
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="shortcut icon" href="//historical.elections.virginia.gov/img/icons/favicon.ico" />
-<link rel="icon" type="image/gif" href="//historical.elections.virginia.gov/img/icons/favicon.gif" />
-  
-
-<!-- Includes: 
-jquery-ui-1.8.14
-jquery.qtip
-global
-charts
-style
-error
-top_bar
-footer
-navigation
-print --> 
-<link rel="stylesheet" type="text/css" href="//historical.elections.virginia.gov/css/combined/css_combined----64696b430b8daaba5c8846c743290593--gtmdfd-2016-10-16_02-22-40.css" />
-<link rel="stylesheet" type="text/css" href="/css/us_state.css?--gtmdfd-2016-10-16_02-22-40" />
-<link rel="stylesheet" type="text/css" href="/css/us_states/VA.css?--gtmdfd-2016-10-16_02-22-40" />
-<link rel="stylesheet" type="text/css" href="/css/responsive.css?--gtmdfd-2016-10-16_02-22-40" /><style type="text/css">	.party_border_left { border-left: 4px #999 solid !important; }	.party_border_right { border-right: 4px #999 solid !important; } .republican_party .party_border_left_default {border-left: 3px #AA4643 solid !important;} .republican_party .party_border_right_default {border-right: 3px #AA4643 solid !important;}.republican_party .party_border_top_default {border-top: 3px #AA4643 solid !important;} .republican_party .party_border_bottom_default {border-bottom: 3px #AA4643 solid !important;}.republican_party .party_text_default {color: #AA4643 !important;}.republican_party .party_background_default,.republican_party.party_background_default {background-color: #AA4643 !important;color: #FFF !important;}  .republican_party .party_border_left {border-left: 3px #AA4643 solid !important;} .republican_party .party_border_right {border-right: 3px #AA4643 solid !important;}.republican_party .party_border_top {border-top: 3px #AA4643 solid !important;} .republican_party .party_border_bottom {border-bottom: 3px #AA4643 solid !important;}.republican_party .party_text {color: #AA4643 !important;}.republican_party .party_background,.republican_party.party_background {background-color: #AA4643 !important;color: #FFF !important;}  .republican_party .party_border_left_light {border-left: 3px #DBA5A4 solid !important;} .republican_party .party_border_right_light {border-right: 3px #DBA5A4 solid !important;}.republican_party .party_border_top_light {border-top: 3px #AA4643 solid !important;} .republican_party .party_border_bottom_light {border-bottom: 3px #DBA5A4 solid !important;}.republican_party .party_text_light {color: #DBA5A4 !important;}.republican_party .party_background_light,.republican_party.party_background_light {background-color: #DBA5A4 !important;}  .republican_party .party_border_left_extra_light {border-left: 3px #F3E0E0 solid !important;} .republican_party .party_border_right_extra_light {border-right: 3px #F3E0E0 solid !important;}.republican_party .party_border_top_extra_light {border-top: 3px #AA4643 solid !important;} .republican_party .party_border_bottom_extra_light {border-bottom: 3px #F3E0E0 solid !important;}.republican_party .party_text_extra_light {color: #F3E0E0 !important;}.republican_party .party_background_extra_light,.republican_party.party_background_extra_light {background-color: #F3E0E0 !important;}  .republican_party .party_border_left_super_light {border-left: 3px #F9F0F0 solid !important;} .republican_party .party_border_right_super_light {border-right: 3px #F9F0F0 solid !important;}.republican_party .party_border_top_super_light {border-top: 3px #AA4643 solid !important;} .republican_party .party_border_bottom_super_light {border-bottom: 3px #F9F0F0 solid !important;}.republican_party .party_text_super_light {color: #F9F0F0 !important;}.republican_party .party_background_super_light,.republican_party.party_background_super_light {background-color: #F9F0F0 !important;}  .republican_party .party_border_left_dark {border-left: 3px #5B2524 solid !important;} .republican_party .party_border_right_dark {border-right: 3px #5B2524 solid !important;}.republican_party .party_border_top_dark {border-top: 3px #AA4643 solid !important;} .republican_party .party_border_bottom_dark {border-bottom: 3px #5B2524 solid !important;}.republican_party .party_text_dark {color: #5B2524 !important;}.republican_party .party_background_dark,.republican_party.party_background_dark {background-color: #5B2524 !important;color: #FFF !important;}  .democratic_party .party_border_left_default {border-left: 3px #4572A7 solid !important;} .democratic_party .party_border_right_default {border-right: 3px #4572A7 solid !important;}.democratic_party .party_border_top_default {border-top: 3px #4572A7 solid !important;} .democratic_party .party_border_bottom_default {border-bottom: 3px #4572A7 solid !important;}.democratic_party .party_text_default {color: #4572A7 !important;}.democratic_party .party_background_default,.democratic_party.party_background_default {background-color: #4572A7 !important;color: #FFF !important;}  .democratic_party .party_border_left {border-left: 3px #4572A7 solid !important;} .democratic_party .party_border_right {border-right: 3px #4572A7 solid !important;}.democratic_party .party_border_top {border-top: 3px #4572A7 solid !important;} .democratic_party .party_border_bottom {border-bottom: 3px #4572A7 solid !important;}.democratic_party .party_text {color: #4572A7 !important;}.democratic_party .party_background,.democratic_party.party_background {background-color: #4572A7 !important;color: #FFF !important;}  .democratic_party .party_border_left_light {border-left: 3px #A5BDDA solid !important;} .democratic_party .party_border_right_light {border-right: 3px #A5BDDA solid !important;}.democratic_party .party_border_top_light {border-top: 3px #4572A7 solid !important;} .democratic_party .party_border_bottom_light {border-bottom: 3px #A5BDDA solid !important;}.democratic_party .party_text_light {color: #A5BDDA !important;}.democratic_party .party_background_light,.democratic_party.party_background_light {background-color: #A5BDDA !important;}  .democratic_party .party_border_left_extra_light {border-left: 3px #E1E9F2 solid !important;} .democratic_party .party_border_right_extra_light {border-right: 3px #E1E9F2 solid !important;}.democratic_party .party_border_top_extra_light {border-top: 3px #4572A7 solid !important;} .democratic_party .party_border_bottom_extra_light {border-bottom: 3px #E1E9F2 solid !important;}.democratic_party .party_text_extra_light {color: #E1E9F2 !important;}.democratic_party .party_background_extra_light,.democratic_party.party_background_extra_light {background-color: #E1E9F2 !important;}  .democratic_party .party_border_left_super_light {border-left: 3px #F0F4F9 solid !important;} .democratic_party .party_border_right_super_light {border-right: 3px #F0F4F9 solid !important;}.democratic_party .party_border_top_super_light {border-top: 3px #4572A7 solid !important;} .democratic_party .party_border_bottom_super_light {border-bottom: 3px #F0F4F9 solid !important;}.democratic_party .party_text_super_light {color: #F0F4F9 !important;}.democratic_party .party_background_super_light,.democratic_party.party_background_super_light {background-color: #F0F4F9 !important;}  .democratic_party .party_border_left_dark {border-left: 3px #253E5A solid !important;} .democratic_party .party_border_right_dark {border-right: 3px #253E5A solid !important;}.democratic_party .party_border_top_dark {border-top: 3px #4572A7 solid !important;} .democratic_party .party_border_bottom_dark {border-bottom: 3px #253E5A solid !important;}.democratic_party .party_text_dark {color: #253E5A !important;}.democratic_party .party_background_dark,.democratic_party.party_background_dark {background-color: #253E5A !important;color: #FFF !important;}  .green_party .party_border_left_default {border-left: 3px #89A54E solid !important;} .green_party .party_border_right_default {border-right: 3px #89A54E solid !important;}.green_party .party_border_top_default {border-top: 3px #89A54E solid !important;} .green_party .party_border_bottom_default {border-bottom: 3px #89A54E solid !important;}.green_party .party_text_default {color: #89A54E !important;}.green_party .party_background_default,.green_party.party_background_default {background-color: #89A54E !important;color: #FFF !important;}  .green_party .party_border_left {border-left: 3px #89A54E solid !important;} .green_party .party_border_right {border-right: 3px #89A54E solid !important;}.green_party .party_border_top {border-top: 3px #89A54E solid !important;} .green_party .party_border_bottom {border-bottom: 3px #89A54E solid !important;}.green_party .party_text {color: #89A54E !important;}.green_party .party_background,.green_party.party_background {background-color: #89A54E !important;color: #FFF !important;}  .green_party .party_border_left_light {border-left: 3px #C7D6A9 solid !important;} .green_party .party_border_right_light {border-right: 3px #C7D6A9 solid !important;}.green_party .party_border_top_light {border-top: 3px #89A54E solid !important;} .green_party .party_border_bottom_light {border-bottom: 3px #C7D6A9 solid !important;}.green_party .party_text_light {color: #C7D6A9 !important;}.green_party .party_background_light,.green_party.party_background_light {background-color: #C7D6A9 !important;}  .green_party .party_border_left_extra_light {border-left: 3px #ECF1E2 solid !important;} .green_party .party_border_right_extra_light {border-right: 3px #ECF1E2 solid !important;}.green_party .party_border_top_extra_light {border-top: 3px #89A54E solid !important;} .green_party .party_border_bottom_extra_light {border-bottom: 3px #ECF1E2 solid !important;}.green_party .party_text_extra_light {color: #ECF1E2 !important;}.green_party .party_background_extra_light,.green_party.party_background_extra_light {background-color: #ECF1E2 !important;}  .green_party .party_border_left_super_light {border-left: 3px #F5F8F1 solid !important;} .green_party .party_border_right_super_light {border-right: 3px #F5F8F1 solid !important;}.green_party .party_border_top_super_light {border-top: 3px #89A54E solid !important;} .green_party .party_border_bottom_super_light {border-bottom: 3px #F5F8F1 solid !important;}.green_party .party_text_super_light {color: #F5F8F1 !important;}.green_party .party_background_super_light,.green_party.party_background_super_light {background-color: #F5F8F1 !important;}  .green_party .party_border_left_dark {border-left: 3px #485728 solid !important;} .green_party .party_border_right_dark {border-right: 3px #485728 solid !important;}.green_party .party_border_top_dark {border-top: 3px #89A54E solid !important;} .green_party .party_border_bottom_dark {border-bottom: 3px #485728 solid !important;}.green_party .party_text_dark {color: #485728 !important;}.green_party .party_background_dark,.green_party.party_background_dark {background-color: #485728 !important;color: #FFF !important;}  .green-rainbow_party .party_border_left_default {border-left: 3px #89A54E solid !important;} .green-rainbow_party .party_border_right_default {border-right: 3px #89A54E solid !important;}.green-rainbow_party .party_border_top_default {border-top: 3px #89A54E solid !important;} .green-rainbow_party .party_border_bottom_default {border-bottom: 3px #89A54E solid !important;}.green-rainbow_party .party_text_default {color: #89A54E !important;}.green-rainbow_party .party_background_default,.green-rainbow_party.party_background_default {background-color: #89A54E !important;color: #FFF !important;}  .green-rainbow_party .party_border_left {border-left: 3px #89A54E solid !important;} .green-rainbow_party .party_border_right {border-right: 3px #89A54E solid !important;}.green-rainbow_party .party_border_top {border-top: 3px #89A54E solid !important;} .green-rainbow_party .party_border_bottom {border-bottom: 3px #89A54E solid !important;}.green-rainbow_party .party_text {color: #89A54E !important;}.green-rainbow_party .party_background,.green-rainbow_party.party_background {background-color: #89A54E !important;color: #FFF !important;}  .green-rainbow_party .party_border_left_light {border-left: 3px #C7D6A9 solid !important;} .green-rainbow_party .party_border_right_light {border-right: 3px #C7D6A9 solid !important;}.green-rainbow_party .party_border_top_light {border-top: 3px #89A54E solid !important;} .green-rainbow_party .party_border_bottom_light {border-bottom: 3px #C7D6A9 solid !important;}.green-rainbow_party .party_text_light {color: #C7D6A9 !important;}.green-rainbow_party .party_background_light,.green-rainbow_party.party_background_light {background-color: #C7D6A9 !important;}  .green-rainbow_party .party_border_left_extra_light {border-left: 3px #ECF1E2 solid !important;} .green-rainbow_party .party_border_right_extra_light {border-right: 3px #ECF1E2 solid !important;}.green-rainbow_party .party_border_top_extra_light {border-top: 3px #89A54E solid !important;} .green-rainbow_party .party_border_bottom_extra_light {border-bottom: 3px #ECF1E2 solid !important;}.green-rainbow_party .party_text_extra_light {color: #ECF1E2 !important;}.green-rainbow_party .party_background_extra_light,.green-rainbow_party.party_background_extra_light {background-color: #ECF1E2 !important;}  .green-rainbow_party .party_border_left_super_light {border-left: 3px #F5F8F1 solid !important;} .green-rainbow_party .party_border_right_super_light {border-right: 3px #F5F8F1 solid !important;}.green-rainbow_party .party_border_top_super_light {border-top: 3px #89A54E solid !important;} .green-rainbow_party .party_border_bottom_super_light {border-bottom: 3px #F5F8F1 solid !important;}.green-rainbow_party .party_text_super_light {color: #F5F8F1 !important;}.green-rainbow_party .party_background_super_light,.green-rainbow_party.party_background_super_light {background-color: #F5F8F1 !important;}  .green-rainbow_party .party_border_left_dark {border-left: 3px #485728 solid !important;} .green-rainbow_party .party_border_right_dark {border-right: 3px #485728 solid !important;}.green-rainbow_party .party_border_top_dark {border-top: 3px #89A54E solid !important;} .green-rainbow_party .party_border_bottom_dark {border-bottom: 3px #485728 solid !important;}.green-rainbow_party .party_text_dark {color: #485728 !important;}.green-rainbow_party .party_background_dark,.green-rainbow_party.party_background_dark {background-color: #485728 !important;color: #FFF !important;}  .libertarian_party .party_border_left_default {border-left: 3px #80699B solid !important;} .libertarian_party .party_border_right_default {border-right: 3px #80699B solid !important;}.libertarian_party .party_border_top_default {border-top: 3px #80699B solid !important;} .libertarian_party .party_border_bottom_default {border-bottom: 3px #80699B solid !important;}.libertarian_party .party_text_default {color: #80699B !important;}.libertarian_party .party_background_default,.libertarian_party.party_background_default {background-color: #80699B !important;color: #FFF !important;}  .libertarian_party .party_border_left {border-left: 3px #80699B solid !important;} .libertarian_party .party_border_right {border-right: 3px #80699B solid !important;}.libertarian_party .party_border_top {border-top: 3px #80699B solid !important;} .libertarian_party .party_border_bottom {border-bottom: 3px #80699B solid !important;}.libertarian_party .party_text {color: #80699B !important;}.libertarian_party .party_background,.libertarian_party.party_background {background-color: #80699B !important;color: #FFF !important;}  .libertarian_party .party_border_left_light {border-left: 3px #BEB3CC solid !important;} .libertarian_party .party_border_right_light {border-right: 3px #BEB3CC solid !important;}.libertarian_party .party_border_top_light {border-top: 3px #80699B solid !important;} .libertarian_party .party_border_bottom_light {border-bottom: 3px #BEB3CC solid !important;}.libertarian_party .party_text_light {color: #BEB3CC !important;}.libertarian_party .party_background_light,.libertarian_party.party_background_light {background-color: #BEB3CC !important;}  .libertarian_party .party_border_left_extra_light {border-left: 3px #EAE6EE solid !important;} .libertarian_party .party_border_right_extra_light {border-right: 3px #EAE6EE solid !important;}.libertarian_party .party_border_top_extra_light {border-top: 3px #80699B solid !important;} .libertarian_party .party_border_bottom_extra_light {border-bottom: 3px #EAE6EE solid !important;}.libertarian_party .party_text_extra_light {color: #EAE6EE !important;}.libertarian_party .party_background_extra_light,.libertarian_party.party_background_extra_light {background-color: #EAE6EE !important;}  .libertarian_party .party_border_left_super_light {border-left: 3px #F4F2F7 solid !important;} .libertarian_party .party_border_right_super_light {border-right: 3px #F4F2F7 solid !important;}.libertarian_party .party_border_top_super_light {border-top: 3px #80699B solid !important;} .libertarian_party .party_border_bottom_super_light {border-bottom: 3px #F4F2F7 solid !important;}.libertarian_party .party_text_super_light {color: #F4F2F7 !important;}.libertarian_party .party_background_super_light,.libertarian_party.party_background_super_light {background-color: #F4F2F7 !important;}  .libertarian_party .party_border_left_dark {border-left: 3px #3F334D solid !important;} .libertarian_party .party_border_right_dark {border-right: 3px #3F334D solid !important;}.libertarian_party .party_border_top_dark {border-top: 3px #80699B solid !important;} .libertarian_party .party_border_bottom_dark {border-bottom: 3px #3F334D solid !important;}.libertarian_party .party_text_dark {color: #3F334D !important;}.libertarian_party .party_background_dark,.libertarian_party.party_background_dark {background-color: #3F334D !important;color: #FFF !important;}  .progressive_party .party_border_left_default {border-left: 3px #89A54E solid !important;} .progressive_party .party_border_right_default {border-right: 3px #89A54E solid !important;}.progressive_party .party_border_top_default {border-top: 3px #89A54E solid !important;} .progressive_party .party_border_bottom_default {border-bottom: 3px #89A54E solid !important;}.progressive_party .party_text_default {color: #89A54E !important;}.progressive_party .party_background_default,.progressive_party.party_background_default {background-color: #89A54E !important;color: #FFF !important;}  .progressive_party .party_border_left {border-left: 3px #89A54E solid !important;} .progressive_party .party_border_right {border-right: 3px #89A54E solid !important;}.progressive_party .party_border_top {border-top: 3px #89A54E solid !important;} .progressive_party .party_border_bottom {border-bottom: 3px #89A54E solid !important;}.progressive_party .party_text {color: #89A54E !important;}.progressive_party .party_background,.progressive_party.party_background {background-color: #89A54E !important;color: #FFF !important;}  .progressive_party .party_border_left_light {border-left: 3px #C7D6A9 solid !important;} .progressive_party .party_border_right_light {border-right: 3px #C7D6A9 solid !important;}.progressive_party .party_border_top_light {border-top: 3px #89A54E solid !important;} .progressive_party .party_border_bottom_light {border-bottom: 3px #C7D6A9 solid !important;}.progressive_party .party_text_light {color: #C7D6A9 !important;}.progressive_party .party_background_light,.progressive_party.party_background_light {background-color: #C7D6A9 !important;}  .progressive_party .party_border_left_extra_light {border-left: 3px #ECF1E2 solid !important;} .progressive_party .party_border_right_extra_light {border-right: 3px #ECF1E2 solid !important;}.progressive_party .party_border_top_extra_light {border-top: 3px #89A54E solid !important;} .progressive_party .party_border_bottom_extra_light {border-bottom: 3px #ECF1E2 solid !important;}.progressive_party .party_text_extra_light {color: #ECF1E2 !important;}.progressive_party .party_background_extra_light,.progressive_party.party_background_extra_light {background-color: #ECF1E2 !important;}  .progressive_party .party_border_left_super_light {border-left: 3px #F5F8F1 solid !important;} .progressive_party .party_border_right_super_light {border-right: 3px #F5F8F1 solid !important;}.progressive_party .party_border_top_super_light {border-top: 3px #89A54E solid !important;} .progressive_party .party_border_bottom_super_light {border-bottom: 3px #F5F8F1 solid !important;}.progressive_party .party_text_super_light {color: #F5F8F1 !important;}.progressive_party .party_background_super_light,.progressive_party.party_background_super_light {background-color: #F5F8F1 !important;}  .progressive_party .party_border_left_dark {border-left: 3px #485728 solid !important;} .progressive_party .party_border_right_dark {border-right: 3px #485728 solid !important;}.progressive_party .party_border_top_dark {border-top: 3px #89A54E solid !important;} .progressive_party .party_border_bottom_dark {border-bottom: 3px #485728 solid !important;}.progressive_party .party_text_dark {color: #485728 !important;}.progressive_party .party_background_dark,.progressive_party.party_background_dark {background-color: #485728 !important;color: #FFF !important;}  .working_families_party .party_border_left_default {border-left: 3px #DB843D solid !important;} .working_families_party .party_border_right_default {border-right: 3px #DB843D solid !important;}.working_families_party .party_border_top_default {border-top: 3px #DB843D solid !important;} .working_families_party .party_border_bottom_default {border-bottom: 3px #DB843D solid !important;}.working_families_party .party_text_default {color: #DB843D !important;}.working_families_party .party_background_default,.working_families_party.party_background_default {background-color: #DB843D !important;color: #FFF !important;}  .working_families_party .party_border_left {border-left: 3px #DB843D solid !important;} .working_families_party .party_border_right {border-right: 3px #DB843D solid !important;}.working_families_party .party_border_top {border-top: 3px #DB843D solid !important;} .working_families_party .party_border_bottom {border-bottom: 3px #DB843D solid !important;}.working_families_party .party_text {color: #DB843D !important;}.working_families_party .party_background,.working_families_party.party_background {background-color: #DB843D !important;color: #FFF !important;}  .working_families_party .party_border_left_light {border-left: 3px #EBBB94 solid !important;} .working_families_party .party_border_right_light {border-right: 3px #EBBB94 solid !important;}.working_families_party .party_border_top_light {border-top: 3px #DB843D solid !important;} .working_families_party .party_border_bottom_light {border-bottom: 3px #EBBB94 solid !important;}.working_families_party .party_text_light {color: #EBBB94 !important;}.working_families_party .party_background_light,.working_families_party.party_background_light {background-color: #EBBB94 !important;}  .working_families_party .party_border_left_extra_light {border-left: 3px #F9E9DB solid !important;} .working_families_party .party_border_right_extra_light {border-right: 3px #F9E9DB solid !important;}.working_families_party .party_border_top_extra_light {border-top: 3px #DB843D solid !important;} .working_families_party .party_border_bottom_extra_light {border-bottom: 3px #F9E9DB solid !important;}.working_families_party .party_text_extra_light {color: #F9E9DB !important;}.working_families_party .party_background_extra_light,.working_families_party.party_background_extra_light {background-color: #F9E9DB !important;}  .working_families_party .party_border_left_super_light {border-left: 3px #FCF4ED solid !important;} .working_families_party .party_border_right_super_light {border-right: 3px #FCF4ED solid !important;}.working_families_party .party_border_top_super_light {border-top: 3px #DB843D solid !important;} .working_families_party .party_border_bottom_super_light {border-bottom: 3px #FCF4ED solid !important;}.working_families_party .party_text_super_light {color: #FCF4ED !important;}.working_families_party .party_background_super_light,.working_families_party.party_background_super_light {background-color: #FCF4ED !important;}  .working_families_party .party_border_left_dark {border-left: 3px #7D4516 solid !important;} .working_families_party .party_border_right_dark {border-right: 3px #7D4516 solid !important;}.working_families_party .party_border_top_dark {border-top: 3px #DB843D solid !important;} .working_families_party .party_border_bottom_dark {border-bottom: 3px #7D4516 solid !important;}.working_families_party .party_text_dark {color: #7D4516 !important;}.working_families_party .party_background_dark,.working_families_party.party_background_dark {background-color: #7D4516 !important;color: #FFF !important;}  .independent_party .party_border_left_default {border-left: 3px #DB843D solid !important;} .independent_party .party_border_right_default {border-right: 3px #DB843D solid !important;}.independent_party .party_border_top_default {border-top: 3px #DB843D solid !important;} .independent_party .party_border_bottom_default {border-bottom: 3px #DB843D solid !important;}.independent_party .party_text_default {color: #DB843D !important;}.independent_party .party_background_default,.independent_party.party_background_default {background-color: #DB843D !important;color: #FFF !important;}  .independent_party .party_border_left {border-left: 3px #DB843D solid !important;} .independent_party .party_border_right {border-right: 3px #DB843D solid !important;}.independent_party .party_border_top {border-top: 3px #DB843D solid !important;} .independent_party .party_border_bottom {border-bottom: 3px #DB843D solid !important;}.independent_party .party_text {color: #DB843D !important;}.independent_party .party_background,.independent_party.party_background {background-color: #DB843D !important;color: #FFF !important;}  .independent_party .party_border_left_light {border-left: 3px #EBBB94 solid !important;} .independent_party .party_border_right_light {border-right: 3px #EBBB94 solid !important;}.independent_party .party_border_top_light {border-top: 3px #DB843D solid !important;} .independent_party .party_border_bottom_light {border-bottom: 3px #EBBB94 solid !important;}.independent_party .party_text_light {color: #EBBB94 !important;}.independent_party .party_background_light,.independent_party.party_background_light {background-color: #EBBB94 !important;}  .independent_party .party_border_left_extra_light {border-left: 3px #F9E9DB solid !important;} .independent_party .party_border_right_extra_light {border-right: 3px #F9E9DB solid !important;}.independent_party .party_border_top_extra_light {border-top: 3px #DB843D solid !important;} .independent_party .party_border_bottom_extra_light {border-bottom: 3px #F9E9DB solid !important;}.independent_party .party_text_extra_light {color: #F9E9DB !important;}.independent_party .party_background_extra_light,.independent_party.party_background_extra_light {background-color: #F9E9DB !important;}  .independent_party .party_border_left_super_light {border-left: 3px #FCF4ED solid !important;} .independent_party .party_border_right_super_light {border-right: 3px #FCF4ED solid !important;}.independent_party .party_border_top_super_light {border-top: 3px #DB843D solid !important;} .independent_party .party_border_bottom_super_light {border-bottom: 3px #FCF4ED solid !important;}.independent_party .party_text_super_light {color: #FCF4ED !important;}.independent_party .party_background_super_light,.independent_party.party_background_super_light {background-color: #FCF4ED !important;}  .independent_party .party_border_left_dark {border-left: 3px #7D4516 solid !important;} .independent_party .party_border_right_dark {border-right: 3px #7D4516 solid !important;}.independent_party .party_border_top_dark {border-top: 3px #DB843D solid !important;} .independent_party .party_border_bottom_dark {border-bottom: 3px #7D4516 solid !important;}.independent_party .party_text_dark {color: #7D4516 !important;}.independent_party .party_background_dark,.independent_party.party_background_dark {background-color: #7D4516 !important;color: #FFF !important;}  .general_party .party_border_left_default {border-left: 3px #222222 solid !important;} .general_party .party_border_right_default {border-right: 3px #222222 solid !important;}.general_party .party_border_top_default {border-top: 3px #222222 solid !important;} .general_party .party_border_bottom_default {border-bottom: 3px #222222 solid !important;}.general_party .party_text_default {color: #222222 !important;}.general_party .party_background_default,.general_party.party_background_default {background-color: #222222 !important;color: #FFF !important;}  .general_party .party_border_left {border-left: 3px #222222 solid !important;} .general_party .party_border_right {border-right: 3px #222222 solid !important;}.general_party .party_border_top {border-top: 3px #222222 solid !important;} .general_party .party_border_bottom {border-bottom: 3px #222222 solid !important;}.general_party .party_text {color: #222222 !important;}.general_party .party_background,.general_party.party_background {background-color: #222222 !important;color: #FFF !important;}  .general_party .party_border_left_light {border-left: 3px #BFBFBF solid !important;} .general_party .party_border_right_light {border-right: 3px #BFBFBF solid !important;}.general_party .party_border_top_light {border-top: 3px #222222 solid !important;} .general_party .party_border_bottom_light {border-bottom: 3px #BFBFBF solid !important;}.general_party .party_text_light {color: #BFBFBF !important;}.general_party .party_background_light,.general_party.party_background_light {background-color: #BFBFBF !important;}  .general_party .party_border_left_extra_light {border-left: 3px #E9E9E9 solid !important;} .general_party .party_border_right_extra_light {border-right: 3px #E9E9E9 solid !important;}.general_party .party_border_top_extra_light {border-top: 3px #222222 solid !important;} .general_party .party_border_bottom_extra_light {border-bottom: 3px #E9E9E9 solid !important;}.general_party .party_text_extra_light {color: #E9E9E9 !important;}.general_party .party_background_extra_light,.general_party.party_background_extra_light {background-color: #E9E9E9 !important;}  .general_party .party_border_left_super_light {border-left: 3px #F4F4F4 solid !important;} .general_party .party_border_right_super_light {border-right: 3px #F4F4F4 solid !important;}.general_party .party_border_top_super_light {border-top: 3px #222222 solid !important;} .general_party .party_border_bottom_super_light {border-bottom: 3px #F4F4F4 solid !important;}.general_party .party_text_super_light {color: #F4F4F4 !important;}.general_party .party_background_super_light,.general_party.party_background_super_light {background-color: #F4F4F4 !important;}  .general_party .party_border_left_dark {border-left: 3px #633C14 solid !important;} .general_party .party_border_right_dark {border-right: 3px #633C14 solid !important;}.general_party .party_border_top_dark {border-top: 3px #222222 solid !important;} .general_party .party_border_bottom_dark {border-bottom: 3px #633C14 solid !important;}.general_party .party_text_dark {color: #633C14 !important;}.general_party .party_background_dark,.general_party.party_background_dark {background-color: #633C14 !important;color: #FFF !important;}  .democratic_republican_party .party_border_left_default {border-left: 3px #80699B solid !important;} .democratic_republican_party .party_border_right_default {border-right: 3px #80699B solid !important;}.democratic_republican_party .party_border_top_default {border-top: 3px #80699B solid !important;} .democratic_republican_party .party_border_bottom_default {border-bottom: 3px #80699B solid !important;}.democratic_republican_party .party_text_default {color: #80699B !important;}.democratic_republican_party .party_background_default,.democratic_republican_party.party_background_default {background-color: #80699B !important;color: #FFF !important;}  .democratic_republican_party .party_border_left {border-left: 3px #80699B solid !important;} .democratic_republican_party .party_border_right {border-right: 3px #80699B solid !important;}.democratic_republican_party .party_border_top {border-top: 3px #80699B solid !important;} .democratic_republican_party .party_border_bottom {border-bottom: 3px #80699B solid !important;}.democratic_republican_party .party_text {color: #80699B !important;}.democratic_republican_party .party_background,.democratic_republican_party.party_background {background-color: #80699B !important;color: #FFF !important;}  .democratic_republican_party .party_border_left_light {border-left: 3px #BEB3CC solid !important;} .democratic_republican_party .party_border_right_light {border-right: 3px #BEB3CC solid !important;}.democratic_republican_party .party_border_top_light {border-top: 3px #80699B solid !important;} .democratic_republican_party .party_border_bottom_light {border-bottom: 3px #BEB3CC solid !important;}.democratic_republican_party .party_text_light {color: #BEB3CC !important;}.democratic_republican_party .party_background_light,.democratic_republican_party.party_background_light {background-color: #BEB3CC !important;}  .democratic_republican_party .party_border_left_extra_light {border-left: 3px #EAE6EE solid !important;} .democratic_republican_party .party_border_right_extra_light {border-right: 3px #EAE6EE solid !important;}.democratic_republican_party .party_border_top_extra_light {border-top: 3px #80699B solid !important;} .democratic_republican_party .party_border_bottom_extra_light {border-bottom: 3px #EAE6EE solid !important;}.democratic_republican_party .party_text_extra_light {color: #EAE6EE !important;}.democratic_republican_party .party_background_extra_light,.democratic_republican_party.party_background_extra_light {background-color: #EAE6EE !important;}  .democratic_republican_party .party_border_left_super_light {border-left: 3px #F4F2F7 solid !important;} .democratic_republican_party .party_border_right_super_light {border-right: 3px #F4F2F7 solid !important;}.democratic_republican_party .party_border_top_super_light {border-top: 3px #80699B solid !important;} .democratic_republican_party .party_border_bottom_super_light {border-bottom: 3px #F4F2F7 solid !important;}.democratic_republican_party .party_text_super_light {color: #F4F2F7 !important;}.democratic_republican_party .party_background_super_light,.democratic_republican_party.party_background_super_light {background-color: #F4F2F7 !important;}  .democratic_republican_party .party_border_left_dark {border-left: 3px #3F334D solid !important;} .democratic_republican_party .party_border_right_dark {border-right: 3px #3F334D solid !important;}.democratic_republican_party .party_border_top_dark {border-top: 3px #80699B solid !important;} .democratic_republican_party .party_border_bottom_dark {border-bottom: 3px #3F334D solid !important;}.democratic_republican_party .party_text_dark {color: #3F334D !important;}.democratic_republican_party .party_background_dark,.democratic_republican_party.party_background_dark {background-color: #3F334D !important;color: #FFF !important;}  .democratic_libertarian_party .party_border_left_default {border-left: 3px #80699B solid !important;} .democratic_libertarian_party .party_border_right_default {border-right: 3px #80699B solid !important;}.democratic_libertarian_party .party_border_top_default {border-top: 3px #80699B solid !important;} .democratic_libertarian_party .party_border_bottom_default {border-bottom: 3px #80699B solid !important;}.democratic_libertarian_party .party_text_default {color: #80699B !important;}.democratic_libertarian_party .party_background_default,.democratic_libertarian_party.party_background_default {background-color: #80699B !important;color: #FFF !important;}  .democratic_libertarian_party .party_border_left {border-left: 3px #80699B solid !important;} .democratic_libertarian_party .party_border_right {border-right: 3px #80699B solid !important;}.democratic_libertarian_party .party_border_top {border-top: 3px #80699B solid !important;} .democratic_libertarian_party .party_border_bottom {border-bottom: 3px #80699B solid !important;}.democratic_libertarian_party .party_text {color: #80699B !important;}.democratic_libertarian_party .party_background,.democratic_libertarian_party.party_background {background-color: #80699B !important;color: #FFF !important;}  .democratic_libertarian_party .party_border_left_light {border-left: 3px #BEB3CC solid !important;} .democratic_libertarian_party .party_border_right_light {border-right: 3px #BEB3CC solid !important;}.democratic_libertarian_party .party_border_top_light {border-top: 3px #80699B solid !important;} .democratic_libertarian_party .party_border_bottom_light {border-bottom: 3px #BEB3CC solid !important;}.democratic_libertarian_party .party_text_light {color: #BEB3CC !important;}.democratic_libertarian_party .party_background_light,.democratic_libertarian_party.party_background_light {background-color: #BEB3CC !important;}  .democratic_libertarian_party .party_border_left_extra_light {border-left: 3px #EAE6EE solid !important;} .democratic_libertarian_party .party_border_right_extra_light {border-right: 3px #EAE6EE solid !important;}.democratic_libertarian_party .party_border_top_extra_light {border-top: 3px #80699B solid !important;} .democratic_libertarian_party .party_border_bottom_extra_light {border-bottom: 3px #EAE6EE solid !important;}.democratic_libertarian_party .party_text_extra_light {color: #EAE6EE !important;}.democratic_libertarian_party .party_background_extra_light,.democratic_libertarian_party.party_background_extra_light {background-color: #EAE6EE !important;}  .democratic_libertarian_party .party_border_left_super_light {border-left: 3px #F4F2F7 solid !important;} .democratic_libertarian_party .party_border_right_super_light {border-right: 3px #F4F2F7 solid !important;}.democratic_libertarian_party .party_border_top_super_light {border-top: 3px #80699B solid !important;} .democratic_libertarian_party .party_border_bottom_super_light {border-bottom: 3px #F4F2F7 solid !important;}.democratic_libertarian_party .party_text_super_light {color: #F4F2F7 !important;}.democratic_libertarian_party .party_background_super_light,.democratic_libertarian_party.party_background_super_light {background-color: #F4F2F7 !important;}  .democratic_libertarian_party .party_border_left_dark {border-left: 3px #3F334D solid !important;} .democratic_libertarian_party .party_border_right_dark {border-right: 3px #3F334D solid !important;}.democratic_libertarian_party .party_border_top_dark {border-top: 3px #80699B solid !important;} .democratic_libertarian_party .party_border_bottom_dark {border-bottom: 3px #3F334D solid !important;}.democratic_libertarian_party .party_text_dark {color: #3F334D !important;}.democratic_libertarian_party .party_background_dark,.democratic_libertarian_party.party_background_dark {background-color: #3F334D !important;color: #FFF !important;}  .republican_libertarian_party .party_border_left_default {border-left: 3px #80699B solid !important;} .republican_libertarian_party .party_border_right_default {border-right: 3px #80699B solid !important;}.republican_libertarian_party .party_border_top_default {border-top: 3px #80699B solid !important;} .republican_libertarian_party .party_border_bottom_default {border-bottom: 3px #80699B solid !important;}.republican_libertarian_party .party_text_default {color: #80699B !important;}.republican_libertarian_party .party_background_default,.republican_libertarian_party.party_background_default {background-color: #80699B !important;color: #FFF !important;}  .republican_libertarian_party .party_border_left {border-left: 3px #80699B solid !important;} .republican_libertarian_party .party_border_right {border-right: 3px #80699B solid !important;}.republican_libertarian_party .party_border_top {border-top: 3px #80699B solid !important;} .republican_libertarian_party .party_border_bottom {border-bottom: 3px #80699B solid !important;}.republican_libertarian_party .party_text {color: #80699B !important;}.republican_libertarian_party .party_background,.republican_libertarian_party.party_background {background-color: #80699B !important;color: #FFF !important;}  .republican_libertarian_party .party_border_left_light {border-left: 3px #BEB3CC solid !important;} .republican_libertarian_party .party_border_right_light {border-right: 3px #BEB3CC solid !important;}.republican_libertarian_party .party_border_top_light {border-top: 3px #80699B solid !important;} .republican_libertarian_party .party_border_bottom_light {border-bottom: 3px #BEB3CC solid !important;}.republican_libertarian_party .party_text_light {color: #BEB3CC !important;}.republican_libertarian_party .party_background_light,.republican_libertarian_party.party_background_light {background-color: #BEB3CC !important;}  .republican_libertarian_party .party_border_left_extra_light {border-left: 3px #EAE6EE solid !important;} .republican_libertarian_party .party_border_right_extra_light {border-right: 3px #EAE6EE solid !important;}.republican_libertarian_party .party_border_top_extra_light {border-top: 3px #80699B solid !important;} .republican_libertarian_party .party_border_bottom_extra_light {border-bottom: 3px #EAE6EE solid !important;}.republican_libertarian_party .party_text_extra_light {color: #EAE6EE !important;}.republican_libertarian_party .party_background_extra_light,.republican_libertarian_party.party_background_extra_light {background-color: #EAE6EE !important;}  .republican_libertarian_party .party_border_left_super_light {border-left: 3px #F4F2F7 solid !important;} .republican_libertarian_party .party_border_right_super_light {border-right: 3px #F4F2F7 solid !important;}.republican_libertarian_party .party_border_top_super_light {border-top: 3px #80699B solid !important;} .republican_libertarian_party .party_border_bottom_super_light {border-bottom: 3px #F4F2F7 solid !important;}.republican_libertarian_party .party_text_super_light {color: #F4F2F7 !important;}.republican_libertarian_party .party_background_super_light,.republican_libertarian_party.party_background_super_light {background-color: #F4F2F7 !important;}  .republican_libertarian_party .party_border_left_dark {border-left: 3px #3F334D solid !important;} .republican_libertarian_party .party_border_right_dark {border-right: 3px #3F334D solid !important;}.republican_libertarian_party .party_border_top_dark {border-top: 3px #80699B solid !important;} .republican_libertarian_party .party_border_bottom_dark {border-bottom: 3px #3F334D solid !important;}.republican_libertarian_party .party_text_dark {color: #3F334D !important;}.republican_libertarian_party .party_background_dark,.republican_libertarian_party.party_background_dark {background-color: #3F334D !important;color: #FFF !important;}  .other_party .party_border_left_default {border-left: 3px #86773C solid !important;} .other_party .party_border_right_default {border-right: 3px #86773C solid !important;}.other_party .party_border_top_default {border-top: 3px #86773C solid !important;} .other_party .party_border_bottom_default {border-bottom: 3px #86773C solid !important;}.other_party .party_text_default {color: #86773C !important;}.other_party .party_background_default,.other_party.party_background_default {background-color: #86773C !important;color: #FFF !important;}  .other_party .party_border_left {border-left: 3px #86773C solid !important;} .other_party .party_border_right {border-right: 3px #86773C solid !important;}.other_party .party_border_top {border-top: 3px #86773C solid !important;} .other_party .party_border_bottom {border-bottom: 3px #86773C solid !important;}.other_party .party_text {color: #86773C !important;}.other_party .party_background,.other_party.party_background {background-color: #86773C !important;color: #FFF !important;}  .other_party .party_border_left_light {border-left: 3px #D8CEA7 solid !important;} .other_party .party_border_right_light {border-right: 3px #D8CEA7 solid !important;}.other_party .party_border_top_light {border-top: 3px #86773C solid !important;} .other_party .party_border_bottom_light {border-bottom: 3px #D8CEA7 solid !important;}.other_party .party_text_light {color: #D8CEA7 !important;}.other_party .party_background_light,.other_party.party_background_light {background-color: #D8CEA7 !important;}  .other_party .party_border_left_extra_light {border-left: 3px #F2EFE1 solid !important;} .other_party .party_border_right_extra_light {border-right: 3px #F2EFE1 solid !important;}.other_party .party_border_top_extra_light {border-top: 3px #86773C solid !important;} .other_party .party_border_bottom_extra_light {border-bottom: 3px #F2EFE1 solid !important;}.other_party .party_text_extra_light {color: #F2EFE1 !important;}.other_party .party_background_extra_light,.other_party.party_background_extra_light {background-color: #F2EFE1 !important;}  .other_party .party_border_left_super_light {border-left: 3px #F9F8F0 solid !important;} .other_party .party_border_right_super_light {border-right: 3px #F9F8F0 solid !important;}.other_party .party_border_top_super_light {border-top: 3px #86773C solid !important;} .other_party .party_border_bottom_super_light {border-bottom: 3px #F9F8F0 solid !important;}.other_party .party_text_super_light {color: #F9F8F0 !important;}.other_party .party_background_super_light,.other_party.party_background_super_light {background-color: #F9F8F0 !important;}  .other_party .party_border_left_dark {border-left: 3px #584F27 solid !important;} .other_party .party_border_right_dark {border-right: 3px #584F27 solid !important;}.other_party .party_border_top_dark {border-top: 3px #86773C solid !important;} .other_party .party_border_bottom_dark {border-bottom: 3px #584F27 solid !important;}.other_party .party_text_dark {color: #584F27 !important;}.other_party .party_background_dark,.other_party.party_background_dark {background-color: #584F27 !important;color: #FFF !important;}  .yes_party .party_border_left_default {border-left: 3px #89A54E solid !important;} .yes_party .party_border_right_default {border-right: 3px #89A54E solid !important;}.yes_party .party_border_top_default {border-top: 3px #89A54E solid !important;} .yes_party .party_border_bottom_default {border-bottom: 3px #89A54E solid !important;}.yes_party .party_text_default {color: #89A54E !important;}.yes_party .party_background_default,.yes_party.party_background_default {background-color: #89A54E !important;color: #FFF !important;}  .yes_party .party_border_left {border-left: 3px #89A54E solid !important;} .yes_party .party_border_right {border-right: 3px #89A54E solid !important;}.yes_party .party_border_top {border-top: 3px #89A54E solid !important;} .yes_party .party_border_bottom {border-bottom: 3px #89A54E solid !important;}.yes_party .party_text {color: #89A54E !important;}.yes_party .party_background,.yes_party.party_background {background-color: #89A54E !important;color: #FFF !important;}  .yes_party .party_border_left_light {border-left: 3px #C7D6A9 solid !important;} .yes_party .party_border_right_light {border-right: 3px #C7D6A9 solid !important;}.yes_party .party_border_top_light {border-top: 3px #89A54E solid !important;} .yes_party .party_border_bottom_light {border-bottom: 3px #C7D6A9 solid !important;}.yes_party .party_text_light {color: #C7D6A9 !important;}.yes_party .party_background_light,.yes_party.party_background_light {background-color: #C7D6A9 !important;}  .yes_party .party_border_left_extra_light {border-left: 3px #ECF1E2 solid !important;} .yes_party .party_border_right_extra_light {border-right: 3px #ECF1E2 solid !important;}.yes_party .party_border_top_extra_light {border-top: 3px #89A54E solid !important;} .yes_party .party_border_bottom_extra_light {border-bottom: 3px #ECF1E2 solid !important;}.yes_party .party_text_extra_light {color: #ECF1E2 !important;}.yes_party .party_background_extra_light,.yes_party.party_background_extra_light {background-color: #ECF1E2 !important;}  .yes_party .party_border_left_super_light {border-left: 3px #F5F8F1 solid !important;} .yes_party .party_border_right_super_light {border-right: 3px #F5F8F1 solid !important;}.yes_party .party_border_top_super_light {border-top: 3px #89A54E solid !important;} .yes_party .party_border_bottom_super_light {border-bottom: 3px #F5F8F1 solid !important;}.yes_party .party_text_super_light {color: #F5F8F1 !important;}.yes_party .party_background_super_light,.yes_party.party_background_super_light {background-color: #F5F8F1 !important;}  .yes_party .party_border_left_dark {border-left: 3px #485728 solid !important;} .yes_party .party_border_right_dark {border-right: 3px #485728 solid !important;}.yes_party .party_border_top_dark {border-top: 3px #89A54E solid !important;} .yes_party .party_border_bottom_dark {border-bottom: 3px #485728 solid !important;}.yes_party .party_text_dark {color: #485728 !important;}.yes_party .party_background_dark,.yes_party.party_background_dark {background-color: #485728 !important;color: #FFF !important;}  .no_party .party_border_left_default {border-left: 3px #A47D7C solid !important;} .no_party .party_border_right_default {border-right: 3px #A47D7C solid !important;}.no_party .party_border_top_default {border-top: 3px #A47D7C solid !important;} .no_party .party_border_bottom_default {border-bottom: 3px #A47D7C solid !important;}.no_party .party_text_default {color: #A47D7C !important;}.no_party .party_background_default,.no_party.party_background_default {background-color: #A47D7C !important;color: #FFF !important;}  .no_party .party_border_left {border-left: 3px #A47D7C solid !important;} .no_party .party_border_right {border-right: 3px #A47D7C solid !important;}.no_party .party_border_top {border-top: 3px #A47D7C solid !important;} .no_party .party_border_bottom {border-bottom: 3px #A47D7C solid !important;}.no_party .party_text {color: #A47D7C !important;}.no_party .party_background,.no_party.party_background {background-color: #A47D7C !important;color: #FFF !important;}  .no_party .party_border_left_light {border-left: 3px #CBB5B4 solid !important;} .no_party .party_border_right_light {border-right: 3px #CBB5B4 solid !important;}.no_party .party_border_top_light {border-top: 3px #A47D7C solid !important;} .no_party .party_border_bottom_light {border-bottom: 3px #CBB5B4 solid !important;}.no_party .party_text_light {color: #CBB5B4 !important;}.no_party .party_background_light,.no_party.party_background_light {background-color: #CBB5B4 !important;}  .no_party .party_border_left_extra_light {border-left: 3px #EEE6E6 solid !important;} .no_party .party_border_right_extra_light {border-right: 3px #EEE6E6 solid !important;}.no_party .party_border_top_extra_light {border-top: 3px #A47D7C solid !important;} .no_party .party_border_bottom_extra_light {border-bottom: 3px #EEE6E6 solid !important;}.no_party .party_text_extra_light {color: #EEE6E6 !important;}.no_party .party_background_extra_light,.no_party.party_background_extra_light {background-color: #EEE6E6 !important;}  .no_party .party_border_left_super_light {border-left: 3px #CCCCCC solid !important;} .no_party .party_border_right_super_light {border-right: 3px #CCCCCC solid !important;}.no_party .party_border_top_super_light {border-top: 3px #A47D7C solid !important;} .no_party .party_border_bottom_super_light {border-bottom: 3px #CCCCCC solid !important;}.no_party .party_text_super_light {color: #CCCCCC !important;}.no_party .party_background_super_light,.no_party.party_background_super_light {background-color: #CCCCCC !important;}  .no_party .party_border_left_dark {border-left: 3px #4B3534 solid !important;} .no_party .party_border_right_dark {border-right: 3px #4B3534 solid !important;}.no_party .party_border_top_dark {border-top: 3px #A47D7C solid !important;} .no_party .party_border_bottom_dark {border-bottom: 3px #4B3534 solid !important;}.no_party .party_text_dark {color: #4B3534 !important;}.no_party .party_background_dark,.no_party.party_background_dark {background-color: #4B3534 !important;color: #FFF !important;} </style><!-- Includes: 
-jquery-1.7.1.min
-jquery-ui_1.8.16.min
-jquery-bbq/jquery.ba-bbq.min
-jquery.cookie
-datatables-1.9.4/js/jquery.dataTables.min
-jquery.fixedTableHeader.min
-jquery.qtip.min
-jquery.scrollTo-min
-jquery.sortElements
-jquery.sortTableColumns
-modernizr.custom.24613
-global --> 
-<script type="text/javascript" src="//historical.elections.virginia.gov/js/combined/js_combined----e2612538347807753bb497b31f4bdb4d--gtmdfd-2016-10-16_02-22-40.js"></script> 
-
- <!-- For IE (any version) -->
-
-<!--[if IE]>
-	
-<link rel="stylesheet" type="text/css" href="/css/style_IE_only.css" /><![endif]-->
-
-<!-- For IE8 or older -->
-
-<!--[if lt IE 9]>
-    
-<script type="text/javascript" src="/js/css3-mediaqueries.js"></script>    
-  
-   <style type="text/css">
-     canvas, header, nav, section, article, aside, footer { display:block; }
-   </style>
-   
-<![endif]-->
-    
-
-<!-- For IE7 or older -->
-
-<!--[if lte IE 7]>
-	
-<link rel="stylesheet" type="text/css" href="/css/style_IE7-_only.css" />
-<script type="text/javascript" src="/js/json2.js"></script><![endif]-->
-
-
-<!-- For IE6 or older :: transparent PNGs -->
-
-<!--[if lte IE 6]>
- 
- 
-<script type="text/javascript" src="/js/supersleight-min.js"></script>
-<![endif]-->
-
-   
-<script type="text/javascript">
-  
-  
- 
- $(document).ready( function() {
-  // Document Ready JS
-  });
-</script>
-
-  
- 
-<META charset="UTF-8" />
-<META name="viewport" content="width=device-width, maximum-scale=1, minimum-scale=1" />
-<META HTTP-EQUIV="X-UA-Compatible" content="IE=edge,chrome=1">
-<META HTTP-EQUIV="Content-Language" CONTENT="en-us">
-<META name="language" content="en-US">
-
-<!--[if IE 7]>
-<html class="ie ie7 no-js" lang="en-US">
-<![endif]-->
-
-<!--[if IE 8]>
-<html class="ie ie8 no-js" lang="en-US">
-
-<style type="text/css">
-
-   .header_container { 
-       background-color:#FFFFFF;       
-    } 
-  .stickymenu {
- background-color:#FFFFFF; 
-border-bottom:2px solid #CCCCCC;
-}
-
-    </style>
-<![endif]-->
-
-<!--[if !(IE 7) | !(IE 8)  ]>
-<html class="no-js" lang="en-US">
-<!--<![endif]-->
-
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width" />
-<link rel="shortcut icon" href="//elections.virginia.gov/wp-content/themes/VASBERedesign/favicon.ico"/>
-
-
-<!--[if lt IE 9]>
-<script src="//elections.virginia.gov/wp-content/themes/VASBERedesign/js/html5.js" type="text/javascript"></script>
-<![endif]-->
-
-<meta name="description" content="" />
-<meta name="keywords" content="" />
-<link rel='stylesheet' href='//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&#038;subset=latin,latin-ext' type='text/css' media='all' />
-<link rel='stylesheet' href='//elections.virginia.gov/wp-content/themes/VASBERedesign/style.css' type='text/css' media='all' />
-<!--[if lt IE 9]>
-<link rel='stylesheet'   href='//elections.virginia.gov/wp-content/themes/VASBERedesign/css/ie.css?ver=20121010' type='text/css' media='all' />
-<![endif]-->
-
- <style type="text/css" id="custom-background-css">
-body.custom-background {
-	background-color: #e6e6e6;
-}
-</style>
-
-
-
-<link rel="stylesheet"   href="//elections.virginia.gov/wp-content/themes/VASBERedesign/css/print.css" type="text/css" media="print"  />
-<link rel="stylesheet"   href="//elections.virginia.gov/wp-content/themes/VASBERedesign/css/reset.css" type="text/css" media="screen"  />
-
-<!--
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
--->
-
-<script>
-  $(document).ready(function() {
-    // This is more like it!
-  });
-</script>
-
-
-
-<script type="text/javascript" src="//elections.virginia.gov/wp-content/themes/VASBERedesign/js/linksmenu.js">
-</script>
-<!-- <script type="text/javascript" src="//elections.virginia.gov/wp-content/themes/VASBERedesign/js/menubar2.js">
-</script>
--->
-<script type="text/javascript" src="//elections.virginia.gov/wp-content/themes/VASBERedesign/js/submenu.js">
-</script>
-<script type="text/javascript" src="//elections.virginia.gov/wp-content/themes/VASBERedesign/js/overlay.js">
-</script>
-<script type="text/javascript" src="//elections.virginia.gov/wp-content/themes/VASBERedesign/js/waypoints.min.js">
-</script>
-<!-- <script type="text/javascript" src="//elections.virginia.gov/wp-content/themes/VASBERedesign/js/scrollTo.js">
-</script>
-<script type="text/javascript" src="//elections.virginia.gov/wp-content/themes/VASBERedesign/js/scrollstuff.js">
-</script>
--->
-
-<script type="text/javascript" src="//elections.virginia.gov/wp-content/themes/VASBERedesign/js/modernizr.sbe.js">
-</script>
-
-
-<!-- REPLACE CSS with local file to avoid XSS errors -->
-<link rel="stylesheet" href="//historical.elections.virginia.gov/css/us_states/VA/fonts-election.css" type="text/css" media="all" />
-
-<!-- <link rel='stylesheet'  href='//elections.virginia.gov/wp-content/themes/VASBERedesign/fonts-election.css' type='text/css' media='all' /> -->
-
-
-
-
-<!--[if IE 8]>
-
-<style type="text/css">
-
-   .header_container { 
-       background-color:#FFFFFF;       
-    } 
-  .stickymenu {
- background-color:#FFFFFF; 
-border-bottom:2px solid #CCCCCC;
-}
-
-/*10-7-14*/
-.searchbar {   
-    width: 320px;
-    float:right;   
-    position:relative;
-    height:40px;
-    top:-20px;
-}
-
-.navbar-search {
-    background-color: #F0F0F0;
-    border: 1px solid #CCCCCC;
-    color: #666666;
-    height: 30px;
-    width: 250px; 
-    float:left;   
-    font-family: "open_sansregular", sans-serif;
-    font-size: 13.25px;
-    margin: 0 5px 0 10px;
-    padding-left:10px;
-    padding-top:10px; 
-}
-/*10-7-14*/
-
-    </style>
-<![endif]-->
-
-<!--historical.elections.virginia.gov tracking begin-->
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-62529711-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
-<!--historical.elections.virginia.gov tracking end-->
-
-
-
-<script>
-  // Dependent on GA tracker init code above
-  
-  ga('create', 'UA-26891945-4', 'auto', {'name':'ElStatsVA'});
-  ga('ElStatsVA.send', 'pageview');
-
-</script>
-
-
-
-</head>
-
- 
-  
-
-<body  class="controller_cakeerror action_download embedded-app us_state us_state_VA">
-
-  
-
-<div class="overflow">
-<div class="printinfo">
-  <div class="printlogo"> <img alt="Logo for Virginia Department of Elections" src="//elections.virginia.gov/wp-content/themes/VASBERedesign/Assets/Images/sbelogosmall-new.png"> </div>
-  <div class="printaddress">
-    <p> Washington Building First Floor<br>
-      1100 Bank Street, <br>
-      Richmond, VA 23219 <br>
-      Phone: (804) 864-8901<br>
-      Toll-free: (800) 552-9745 <br>
-      Fax: (804) 371-0194 <br>
-      Email: info@elections.virginia.gov</p>
-  </div>
-</div>
-<!-- Begin CommonBanner DIV -->
-  
-<div class="vabar">
-  <div id="commonBanner"> <span class="screenReaderOnly"><a title="Screen reader can skip to content" href="#skipPoint" tabindex="1" accesskey="c">Skip to Content</a></span>
-    <div> <a class="virginiaLogo" title="Virginia.gov portal official website of the Commonwealth of Virginia" href="https://www.virginia.gov/" tabindex="2"><span class="hidden-alt-text">Virginia.gov portal</span></a> </div>
-    <div class="alignLeft"> <a title="Virginia agency websites" href="https://www.virginia.gov/government/state-employees/agency-directory" tabindex="3">Agencies</a> | <a title="Virginia Governor" href="https://www.governor.virginia.gov" tabindex="4">Governor</a> </div>
-    <div id="virginiaSearch"> <a title="Search Virginia.Gov official website of the Commonwealth of Virginia" href="https://www.virginia.gov/search" tabindex="5" accesskey="s">Search Virginia.Gov</a> </div>
-  </div>
-</div>
-
-<!-- END CommonBanner DIV -->
-  
-<div class="header_container">
-  <div class="header">
-    <div class="sticky_container">
-      <div class="logo first"> </div>
-      <div class="searchbar last mobilesearch">
-        <form action="//elections.virginia.gov/search-results/index.html">
-          <input style="display:none" type="hidden" name="sitesearch" value="//elections.virginia.gov">
-          <label for="SE" class="label-hide">Search Elections</label>
-          <input name="q" alt="Search Elections" type="text" class="navbar-search" onfocus="if (this.value == 'Search Elections') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search Elections';}" value="Search Elections" id="SE"/>
-          <input name="Go" type="submit" class="siteSearchBtn" title="Search" value="Go">
-          <input style="display:none" type="hidden" name="cof" value="FORID:10" />
-        </form>
-      </div>
-      <div class="menu-header">
-        <ul id="menu-test" class="menu">
-          <li id="menu-item-360" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-360"><a href="//elections.virginia.gov/index.html">Home</a></li>
-          <li id="menu-item-339" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-339"><a href="//elections.virginia.gov/registration/index.html">Registration</a>
-            <ul class="sub-menu">
-              <li id="menu-item-340" class="singleline menu-item menu-item-type-post_type menu-item-object-page menu-item-340"><a href="//elections.virginia.gov/registration/how-to-register/index.html">How to Register</a></li>
-              <li id="menu-item-353" class="singleline menu-item menu-item-type-post_type menu-item-object-page menu-item-353"><a href="//elections.virginia.gov/registration/view-your-info/index.html">View Your Info</a></li>
-              <li id="menu-item-2018" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2018"><a href="//elections.virginia.gov/registration/photo-ids-required-to-vote/index.html">Photo ID Required to Vote</a></li>
-              <li id="menu-item-343" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-343"><a href="//elections.virginia.gov/registration/military-overseas/index.html">Military &#038; Overseas</a></li>
-              <li id="menu-item-347" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-347"><a href="//elections.virginia.gov/registration/voters-with-special-needs/index.html">Voters with Special Needs</a></li>
-              <li id="menu-item-354" class="singleline menu-item menu-item-type-post_type menu-item-object-page menu-item-354"><a href="//elections.virginia.gov/registration/voter-forms/index.html">Voter Forms</a></li>
-              <li id="menu-item-342" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-342"><a href="//elections.virginia.gov/registration/designated-state-agencies/index.html">Designated State Agencies</a></li>
-              <li id="menu-item-346" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-346"><a href="//elections.virginia.gov/registration/voter-rights-responsibilities/index.html">Voter Rights &#038; Responsibilities</a></li>
-              <li id="menu-item-344" class="singleline menu-item menu-item-type-post_type menu-item-object-page menu-item-344"><a href="//elections.virginia.gov/registration/registration-drives/index.html">Registration Drives</a></li>
-              <li id="menu-item-2241" class="singleline menu-item menu-item-type-post_type menu-item-object-page menu-item-2241"><a href="//elections.virginia.gov/voter-complaints/index.html">Voter Complaints</a></li>
-              <li id="menu-item-345" class="singleline menu-item menu-item-type-post_type menu-item-object-page menu-item-345"><a href="//elections.virginia.gov/registration/registration-faq/index.html">Registration FAQ</a></li>
-              <li id="menu-item-3419" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-349"><a href="//elections.virginia.gov/registration/college-student-info/index.html">College Student Info</a></li>
-            </ul>
-          </li>
-          <li id="menu-item-334" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-334"><a href="//elections.virginia.gov/casting-a-ballot/index.html">Casting a Ballot</a>
-            <ul class="sub-menu">
-              <li id="menu-item-337" class="singleline menu-item menu-item-type-post_type menu-item-object-page menu-item-337"><a href="//elections.virginia.gov/casting-a-ballot/in-person-voting/index.html">In-Person Voting</a></li>
-              <li id="menu-item-219" class="singleline menu-item menu-item-type-custom menu-item-object-custom menu-item-219"><a href="//elections.virginia.gov/poll">Poll Location</a></li>
-              <li id="menu-item-335" class="singleline menu-item menu-item-type-post_type menu-item-object-page menu-item-335"><a href="//elections.virginia.gov/casting-a-ballot/absentee-voting/index.html">Absentee Voting</a></li>
-              <li id="menu-item-348" class="singleline menu-item menu-item-type-post_type menu-item-object-page menu-item-348"><a href="//elections.virginia.gov/registration/voting-systems/index.html">Voting Systems</a></li>
-              <li id="menu-item-355" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-355"><a href="//elections.virginia.gov/registration/military-overseas/index.html">Military &#038; Overseas</a></li>
-              <li id="menu-item-356" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-356"><a href="//elections.virginia.gov/registration/voters-with-special-needs/index.html">Voters with Special Needs</a></li>
-              <li id="menu-item-336" class="singleline menu-item menu-item-type-post_type menu-item-object-page menu-item-336"><a href="//elections.virginia.gov/casting-a-ballot/candidate-list/index.html">Candidate List</a></li>
-              <li id="menu-item-33" class="singleline menu-item menu-item-type-custom menu-item-object-custom menu-item-33"><a href="//elections.virginia.gov/ballot">Ballot Information</a></li>
-            </ul>
-          </li>
-          <li id="menu-item-349" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-349 current-page-ancestor current-menu-ancestor current-menu-parent current-page-parent current_page_parent current_page_ancestor"><a href="//elections.virginia.gov/resultsreports/index.html">Results/Reports</a>
-            <ul class="sub-menu">
-              <li id="menu-item-351" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-76 current_page_item menu-item-has-children menu-item-351"><a href="//elections.virginia.gov/resultsreports/registration-statistics/index.html">Registration Statistics</a>
-                <ul class="sub-menu">
-                  <li id="menu-item-352" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-352"><a href="//elections.virginia.gov/resultsreports/registration-statistics/2012-registration-statistics/index.html">2012 Registration Statistics</a></li>
-                </ul>
-              </li>
-              <li id="menu-item-350" class="singleline menu-item menu-item-type-post_type menu-item-object-page menu-item-350"><a href="//elections.virginia.gov/resultsreports/election-results/index.html">Election Results</a></li>
-              <li id="menu-item-1034" class="singleline menu-item menu-item-type-custom menu-item-object-custom menu-item-1034"><a href="//elections.virginia.gov/candidatepac-info/reporting/index.html">Campaign Reports</a></li>
-              <li id="menu-item-341" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-341"><a href="//elections.virginia.gov/resultsreports/maintenance-reports/index.html">Voter Registration List Maintenance</a></li>
-            </ul>
-          </li>
-          <li id="menu-item-322" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-322"><a href="//elections.virginia.gov/candidatepac-info/index.html">Candidate/PAC Info</a>
-            <ul class="sub-menu">
-              <li id="menu-item-323" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-323"><a href="//elections.virginia.gov/candidatepac-info/becoming-a-candidate/index.html">Becoming a Candidate</a></li>
-              <li id="menu-item-325" class="singleline menu-item menu-item-type-post_type menu-item-object-page menu-item-325"><a href="//elections.virginia.gov/candidatepac-info/regulation-and-policies/index.html">Laws and Policies</a></li>
-              <li id="menu-item-326" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-326"><a href="//elections.virginia.gov/candidatepac-info/political-committees/index.html">Political Committees</a>
-                <ul class="sub-menu">
-                  <li id="menu-item-331" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-331"><a href="//elections.virginia.gov/candidatepac-info/political-committees/referendum-committees/index.html">Referendum Committees</a></li>
-                  <li id="menu-item-330" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-330"><a href="//elections.virginia.gov/candidatepac-info/political-committees/political-party-committees/index.html">Political Party Committees</a></li>
-                  <li id="menu-item-329" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-329"><a href="//elections.virginia.gov/candidatepac-info/political-committees/political-action-committees/index.html">Political Action Committees</a></li>
-                  <li id="menu-item-328" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-328"><a href="//elections.virginia.gov/candidatepac-info/political-committees/out-of-state-committees/index.html">Out-of-State Committees</a></li>
-                  <li id="menu-item-327" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-327"><a href="//elections.virginia.gov/candidatepac-info/political-committees/inaugural-committees/index.html">Inaugural Committees</a></li>
-                </ul>
-              </li>
-              <li id="menu-item-332" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-332"><a href="//elections.virginia.gov/candidatepac-info/client-services/index.html">Purchasing Voter Lists from ELECT</a></li>
-              <li id="menu-item-324" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-324"><a href="//elections.virginia.gov/candidatepac-info/campaign-finance-filing/index.html">Campaign Finance Filing</a></li>
-              <li id="menu-item-333" class="singleline menu-item menu-item-type-post_type menu-item-object-page menu-item-333"><a href="//elections.virginia.gov/candidatepac-info/reporting/index.html">Reporting</a></li>
-              <li id="menu-item-534" class="singleline menu-item menu-item-type-post_type menu-item-object-page menu-item-534"><a href="//elections.virginia.gov/candidatepac-info/candidate-forms/index.html">Candidate Forms</a></li>
-              <li id="menu-item-535" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-535"><a href="//elections.virginia.gov/candidatepac-info/campaign-finance-disclosure-forms/index.html">Campaign Finance Disclosure Forms</a></li>
-              <li  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-535"><a 
-
-href="//elections.virginia.gov/candidatepac-info/primary-filing/index.html">Primary Filing Info (State / Local)
-
-</a></li>
-<li  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-535"><a 
-
-href="//elections.virginia.gov/candidatepac-info/presidential-primary-filing/index.html">Primary Filing Info 
-
-(Presidential)</a></li>
-               </ul>
-          </li>
-          <li id="menu-item-338" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-338"><a href="//elections.virginia.gov/election-law/index.html">Election Law</a>
-            <ul class="sub-menu">
-              <li id="menu-item-359" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-359"><a href="//elections.virginia.gov/election-law/regulations-and-policies/index.html">Regulations and Policies</a></li>
-              <li id="menu-item-358" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-358"><a href="//elections.virginia.gov/election-law/education-materials/index.html">Education Materials</a></li>
-              <li id="menu-item-357" class="singleline menu-item menu-item-type-post_type menu-item-object-page menu-item-357"><a href="//elections.virginia.gov/election-law/policy-tools/index.html">Policy Tools</a></li>
-              <li id="menu-item-899" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-899"><a href="//elections.virginia.gov/election-law/place-issue-on-ballot/index.html">Place Issue on Ballot</a></li>
-            </ul>
-          </li>
-          <li id="menu-item-856" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-556"><a href="//elections.virginia.gov/board/index.html">Board</a>
-            <ul class="sub-menu">
-              <li id="menu-item-2093" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2093"><a href="//elections.virginia.gov/board/board-members/index.html">SBE Board Members</a></li>
-              <li id="menu-item-563" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-563"><a href="//elections.virginia.gov/board/board-meeting-information/index.html">SBE Board Meeting Information</a></li>
-              <li id="menu-item-1381" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1381"><a href="//elections.virginia.gov/board/greb-duties-workgroup/index.html">GR/EB Duties Workgroup</a></li>
-              <li id="menu-item-1266" class="singleline menu-item menu-item-type-post_type menu-item-object-page menu-item-1266"><a href="//elections.virginia.gov/board/senate-bill-eleven/index.html">SB 11 Workgroup</a></li>
-            </ul>
-          </li>
-          <li id="menu-item-556" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-556"><a href="//elections.virginia.gov/media/index.html">Media</a>
-            <ul class="sub-menu">
-              <li id="menu-item-2255" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2255"><a href="//elections.virginia.gov/media/election-night-reporting/index.html">Election Night Reporting</a></li>
-              <li id="menu-item-559" class="singleline menu-item menu-item-type-post_type menu-item-object-page menu-item-559"><a href="//elections.virginia.gov/media/new-releases/index.html">News Releases</a></li>
-              <li id="menu-item-558" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-558"><a href="//elections.virginia.gov/media/calendars-schedules/index.html">Calendars &#038; Schedules</a></li>
-              <li id="menu-item-763" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-763"><a href="//elections.virginia.gov/media/freedom-of-information-act/index.html">Freedom of Information Act</a></li>
-              <li id="menu-item-560" class="singleline menu-item menu-item-type-post_type menu-item-object-page menu-item-560"><a href="//elections.virginia.gov/media/guidelines/index.html">Media Guidelines</a></li>
-              <li id="menu-item-1216" class="singleline menu-item menu-item-type-post_type menu-item-object-page menu-item-1216"><a href="//elections.virginia.gov/media/contact/index.html">Media Inquiries</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <div class="menubutton"><span class="screenReaderOnly"><a title="Mobile menu" href="#menu" tabindex="6" accesskey="m">Menu</a></span> <a href="#">Menu</a><a name="menu"></a>
-        <div class="menu-mobile-container">
-          <ul id="menu-mobile" class="menu">
-            <li id="menu-item-769" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-245 current_page_item menu-item-769"><a href="//elections.virginia.gov/index.html">Home</a></li>
-            <li id="menu-item-768" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-768"><a href="//elections.virginia.gov/registration/index.html">Registration</a></li>
-            <li id="menu-item-767" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-767"><a href="//elections.virginia.gov/casting-a-ballot/index.html">Casting a Ballot</a></li>
-            <li id="menu-item-766" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-766"><a href="//elections.virginia.gov/resultsreports/index.html">Results/Reports</a></li>
-            <li id="menu-item-772" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-772"><a href="//elections.virginia.gov/candidatepac-info/index.html">Candidate/PAC Info</a></li>
-            <li id="menu-item-771" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-771"><a href="//elections.virginia.gov/election-law/index.html">Election Law</a></li>
-            <li id="menu-item-780" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-780"><a href="//elections.virginia.gov/board/index.html">Board</a></li>
-            <li id="menu-item-770" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-770"><a href="//elections.virginia.gov/media/index.html">Media</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="content menuoverlay">
-  <hr />
-  <div class="content_container">
-    <header class="entry-header">
-      <!-- // *** ElStats add in *** // -->
-      <h1 class="entry-title"><a href="/">Elections Database</a></h1>
-      <div class="breadcrumbs"> 
-        
-        <!-- Breadcrumb NavXT 5.0.1 --> <a title="Virginia Department of Elections Home page" href="//elections.virginia.gov" class="home">Virginia Department of Elections</a> &gt; Index </div>
-      <div class="searchbar last">
-        <form action="//elections.virginia.gov/search-results/index.html">
-          <input style="display:none" type="hidden" name="sitesearch" value="//elections.virginia.gov">
-          <label for="SE2" class="label-hide">Search Elections</label>
-          <input name="q" alt="Search Elections" type="text" class="navbar-search" onfocus="if (this.value == 'Search Elections') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search Elections';}" value="Search Elections" id="SE2"/>
-          <input name="Go" type="submit" class="siteSearchBtn" title="Search" value="Go">
-          <input style="display:none" type="hidden" name="cof" value="FORID:10" />
-        </form>
-      </div>
-    </header>
-    <span class="screenReaderOnly"><a name="skipPoint" tabindex="7"></a></span>
-    <div class="clear"> </div>
-    <div class="sidebar">
-      <div id="secondary" class="widget-area" role="complementary">
-        
-        <!-- #secondary --> 
-        
-      </div>
-    </div>
-    <div class="page_content">
-      <div id="primary" class="site-content">
-        <article id="post-488" class="post-488 page type-page status-publish hentry">
-          <div class="entry-content">  
-	
-	
-    
-<!-- Facebook JS -->
-<div id="fb-root"></div>
-
-<script type="text/javascript">
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '270866949612579',
-      channelURL : '//historical.elections.virginia.gov/about/facebook_channel', // Channel File
-      status     : true, // check login status
-      cookie     : true, // enable cookies to allow the server to access the session
-      oauth      : true, // enable OAuth 2.0
-      xfbml      : true  // parse XFBML
-    });
-
-    // Additional initialization code here
-      };
-</script>
-<script type="text/javascript">
-  (function(d){
-     var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
-     js = d.createElement('script'); js.id = id; js.async = true;
-     js.src = "//connect.facebook.net/en_US/all.js";
-     d.getElementsByTagName('head')[0].appendChild(js);
-   }(document));
-</script>
-        
-	
-    <div id="page_wrapper">
-    
-        <!-- Global Header in Default Layout -->
-           <div id="top_bar_wrapper">
-    <div class="inner"> 
-		
-                 <div class="banner_top">
-          <div class="left"><a href="http://historical.elections.virginia.gov"><img class="spacer" src="//historical.elections.virginia.gov/img/spacer.gif" alt="Return to Homepage" /><span class="site-title">Virginia Elections Database</span></a></div>
-          <div class="right"></div>
-          <div class="clear">&nbsp;</div>
-         </div>
-
-
-                
-         <div class="utility_bar">
-        
-            <div class="item logo">
-                          
-             <a class="logo" href="/"><img alt="Virginia Elections Database" src="//historical.elections.virginia.gov/img/us_states/VA/logo_large.png" onerror="if (this.src != '//historical.elections.virginia.gov/img/us_states/EX/logo_large.png') this.src = '//historical.elections.virginia.gov/img/us_states/EX/logo_large.png';" /></a>
-             
-            </div>
-            <div class="item admin_title">
-                         </div>
-            <div class="item admin_visit_links">
-            
-            </div>
-            
-            
-            
-        
-			<div class="clear">&nbsp;</div>
-         </div> <!--// END div.utility_bar //-->
-
-
-
-         <div class="clear">&nbsp;</div>
-
-                
-  </div>
- </div>
-
-   
-        
-        
-        
-        
-        <div id="content_wrapper" >
-            
-            
-            <!-- View in Default Layout -->
-            <div class="error-400">
-
-<div class="float_left" style="max-width:300px; top: 60px;">
- <h2>Error 404: Not Found</h2> 
- <p style="position: relative; top: 0px; width: 270px;">Sorry!  The page you requested: 
- <br /><strong>/elections/download/%7B%7D/precincts_include:0/</strong> 
- <br />does not exist on the server.  <br />  <br /> <a href="/">Return to homepage &raquo;</a></p>
-</div>
-<!--<div class="float_right">
- <img src="//historical.elections.virginia.gov/img/kitten_searching_474.jpg" alt="Photo of a kitten searching for its home" width="300" />
-</div> -->
-<div class="clear">&nbsp;</div>
-</div>
-
-            
-            <div class="clear in_content_wrapper">&nbsp;</div>
-    
-        </div> <!--// END div#content_wrapper //-->
-        
-       
-    
-        <!-- Footer -->
-        <div id="footer_wrapper" >
- <div class="inner">
- 
-  <div class="banner_bottom"></div>  
- </div>
-</div>
-
-	
- 	</div> <!--// END div#page_wrapper //-->
-
-
-
-
-<!-- no js includes required here -->
-
-
-
-</div>
-          <!-- .entry-content -->
-          
-          <footer class="entry-meta"> </footer>
-          <!-- .entry-meta --> 
-          
-        </article>
-        <!-- #post --> 
-        
-      </div>
-    </div>
-  </div>
-  <hr class="blue"/>
-</div>
-<div class="clear"> </div>
-<div class="footercontainer">
-  <div class="footer">
-    <div class="footerfeature_container">
-      <div class="footerfeature_cell footerone">
-        <div class="footerfeature_info">
-          <h4>Important Forms</h4>
-          <ul>
-            <li><a title="Absentee Ballot Application PDF" href="//elections.virginia.gov/Files/Forms/VoterForms/VirginiaAbsenteeBallotApplication.pdf">Absentee Ballot Application</a> </li>
-            <li><a title="Voter Registration Application PDF" href="//elections.virginia.gov/Files/Forms/VoterForms/VoterRegistrationApplication.pdf">Voter Registration Application</a> </li>
-            <li><a title="Online Officer of Election Interest Form" href="//elections.virginia.gov/officer">Officer of Election Interest Form</a> </li>
-            <li><a title="Annual Absentee Ballot Application" href="//elections.virginia.gov/Files/Forms/VoterForms/VoterPhotoIdApplication.pdf">Voter Photo Identification Application</a></li>
-            <li><a title="View Candidate forms" href="//elections.virginia.gov/candidatepac-info/candidate-forms/index.html">Candidate Forms</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footerfeature_cell footertwo">
-        <div class="footerfeature_info">
-          <h4>Online Voter Information</h4>
-          <ul >
-            <li><a  href="//elections.virginia.gov/ballot" title="Find information about what you are voting on">Find out what is on your Ballot</a></li>
-            <li><a  href="//elections.virginia.gov/poll" title="Type your address and find where to vote.">Find where to Vote</a></li>
-            <li><a href="//elections.virginia.gov/casting-a-ballot/in-person-voting/index.html" title="See what is needed on the day of the election.">Voting In-Person</a></li>
-            <li><a  href="//elections.virginia.gov/LocalGR" title="Find and contact your local Registrar.">Contact Local Office</a></li>
-            <li><a  href="//elections.virginia.gov/casting-a-ballot/candidate-list/index.html" title="Obtain a list of the candidates by election">Candidates List</a></li>
-            <li><a title="Voter Registration Online" href="//elections.virginia.gov/vote">Register to vote online</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footerfeature_cell footerthree">
-        <div class="footerfeature_info">
-          <h4>Election Results and Statistics</h4>
-          <ul >
-            <li><a  href="//elections.virginia.gov/resultsreports/registration-statistics/index.html" title="View Registration Statistics">Registration Statistics</a></li>
-            <li><a  href="//elections.virginia.gov/candidatepac-info/reporting/index.html" title="View campaign reports and learn about campaign finance">Campaign Reports</a></li>
-            <li><a title="Election Results" href ="//elections.virginia.gov/resultsreports/index.html">Election Results</a></li>
-            <li><a title="Voter Registration List Maintenance" href ="//elections.virginia.gov/resultsreports/maintenance-reports/index.html">Voter Registration List Maintenance</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="clear"><br>
-      </div>
-      <div class="footercell first">
-        <h4>Find Us</h4>
-        <ul>
-          <li><a title="Contact the Virginia Department of Elections"  href="//elections.virginia.gov/contact-us/index.html">Contact Us</a></li>
-          <li> <a title="Contact State Board Members" href="//elections.virginia.gov/board/board-members/index.html">Board Members</a> </li>
-        </ul>
-        <br>
-        Washington Building <br>
-        1100 Bank Street, First Floor <br>
-        Richmond, VA 23219 </div>
-      <div class="footercell">
-        <h4>Organization</h4>
-        <ul>
-          <li> <a  title="Department of Elections'  Expenditures" href="//datapoint.apa.virginia.gov/exp/exp_checkbook_agency.cfm?AGYCODE=132">Check Elections' Expenditures</a> </li>
-          <li><a href="//elections.virginia.gov/Files/sbeorgchart.pdf" title="Department of Elections' Organizational Chart" >Elections' Organizational Chart</a> </li>
-          <li> <a title="Elections' Strategic Plan" href="https://solutions.virginia.gov/pbreports/rdPage.aspx?rdReport=vp_Agency&rdAgReset=True&Agency=132">Strategic Plan</a> </li>
-          <li> <a title="Freedom of Information Act (FOIA)" href="//elections.virginia.gov/media/freedom-of-information-act/index.html">Freedom of Information Act</a> </li>
-        </ul>
-      </div>
-      <div class="footercell thirdcell">
-        <h4>Social Media</h4>
-        <ul class="socialmedia">
-          <li class="facebook"><a title="Department of Elections' Facebook" href="https://www.facebook.com/VirginiaELECT" target="new">Facebook</a> </li>
-          <li class="twitter"><a title="Department of Elections' Twitter" href="https://twitter.com/vaELECT" target="new">Twitter</a> </li>
-          <li class="youtube"><a title="Department of Elections' YouTube" href="//www.youtube.com/user/SBEvirginia" target="new">YouTube</a> </li>
-        </ul>
-      </div>
-      <div class="footercell last omegalogo"> <img src="//elections.virginia.gov/wp-content/themes/VASBERedesign/Assets/Images/footerlogoOPT.png" alt="Vote in Virginia!"> </div>
-      <div class="subfooter">
-        <h5>©2014-2015 Virginia Department of Elections. All rights reserved - <a title="Department of Elections Privacy Policy" href="//elections.virginia.gov/privacy-policy/index.html">Privacy Policy</a></h5>
-        <h5>Some documents contained on this site require <a title="Get Adobe Reader" href="https://get.adobe.com/reader/">Adobe Reader</a> for viewing.</h5>
-        <br>
-        <a title="Department of Elections' Home" href="//elections.virginia.gov/index.html">Home</a> | <a title="Virginia Voter Registration" href="//elections.virginia.gov/registration/index.html">Registration</a> | <a title="Casting a Ballot Information" href="//elections.virginia.gov/casting-a-ballot/index.html">Casting a Ballot</a> | <a title="Virginia Election Results/Reports" href="//elections.virginia.gov/resultsreports/index.html">Results/Reports</a> | <a title="Virginia Candidates/PAC Info"  href="//elections.virginia.gov/candidatepac-info/index.html">Candidates/PAC Info</a> | <a title="Virginia Election Law" href="//elections.virginia.gov/election-law/index.html">Election Law</a> | <a title="Board Information" href="//elections.virginia.gov/board/index.html">Board</a> | <a title="Media Information" href="//elections.virginia.gov/media/index.html">Media</a></div>
-    </div>
-  </div>
-</div>
-<script type="text/javascript">
-/*<![CDATA[*/
-(function() {
-var sz = document.createElement('script'); sz.type = 'text/javascript'; sz.async = true;
-sz.src = '//us2.siteimprove.com/js/siteanalyze_86066.js';
-var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sz, s);
-})();
-/*]]>*/
-</script> 
-<script type="text/javascript" src="//elections.virginia.gov/wp-content/themes/VASBERedesign/js/navigation.js"></script>
-
-
- 
-
-</body>
-</html>
-
-
-
-<!-- no js includes required here -->
+County/City,Ward,Pct,"Richard Nixon","Hubert Humphrey","George E. Wallace","Henning Blomen","Dick Gregory","E. Harold Munn","All Others",Blanks,"Total Votes Cast"
+,,,Republican,Democratic,"American Independent","Socialist Labor","Peace and Freedom",Prohibition
+"Accomack County",,,"3,231","2,467","3,460",10,10,3,0,0,"9,181"
+"Albemarle County",,,"4,512","2,255","1,657",4,10,3,0,0,"8,441"
+"Alexandria City",,,"13,265","14,351","4,131",8,48,13,0,0,"31,816"
+"Alleghany County",,,"1,649",988,"1,153",1,2,0,0,0,"3,793"
+"Amelia County",,,857,830,832,2,4,3,0,0,"2,528"
+"Amherst County",,,"2,656","1,543","2,449",18,7,1,0,0,"6,674"
+"Appomattox County",,,"1,753",756,"1,512",6,8,2,0,0,"4,037"
+"Arlington County",,,"28,163","26,107","6,746",163,131,16,0,0,"61,326"
+"Augusta County",,,"6,313","2,028","2,483",61,9,6,0,0,"10,900"
+"Bath County",,,872,494,529,2,0,0,0,0,"1,897"
+"Bedford County",,,"2,807","1,574","3,316",138,2,3,0,0,"7,840"
+"Bedford City",,,"1,047",569,679,82,2,1,0,0,"2,380"
+"Bland County",,,938,560,361,1,2,0,0,0,"1,862"
+"Botetourt County",,,"2,598","1,272","1,267",1,2,0,0,0,"5,140"
+"Bristol City",,,"1,930","1,531",911,4,1,0,0,0,"4,377"
+"Brunswick County",,,"1,139","1,910","2,088",5,3,2,0,0,"5,147"
+"Buchanan County",,,"3,699","5,003","1,067",27,16,4,0,0,"9,816"
+"Buckingham County",,,"1,027",984,"1,185",8,0,0,0,0,"3,204"
+"Buena Vista City",,,814,387,456,0,2,1,0,0,"1,660"
+"Campbell County",,,"5,731","1,996","4,425",648,8,3,0,0,"12,811"
+"Caroline County",,,"1,162","2,165","1,084",7,7,1,0,0,"4,426"
+"Carroll County",,,"4,909","1,773",958,5,4,2,0,0,"7,651"
+"Charles City County",,,320,"1,457",176,1,4,2,0,0,"1,960"
+"Charlotte County",,,"1,042","1,045","2,163",8,5,2,0,0,"4,265"
+"Charlottesville City",,,"5,601","3,831","1,781",90,23,9,0,0,"11,335"
+"Chesapeake City",,,"6,234","6,843","11,084",543,33,23,0,0,"24,760"
+"Chesterfield County",,,"22,015","5,715","11,504",26,24,8,0,0,"39,292"
+"Clarke County",,,"1,127",768,742,1,2,4,0,0,"2,644"
+"Clifton Forge City",,,925,734,462,0,1,0,0,0,"2,122"
+"Colonial Heights City",,,"2,650",650,"2,106",2,5,0,0,0,"5,413"
+"Covington City",,,"1,551","1,195",846,1,2,0,0,0,"3,595"
+"Craig County",,,581,419,256,1,1,0,0,0,"1,258"
+"Culpeper County",,,"2,229","1,239","1,217",6,2,1,0,0,"4,694"
+"Cumberland County",,,844,978,602,4,2,2,0,0,"2,432"
+"Danville City",,,"6,796","4,495","5,391",156,24,12,0,0,"16,874"
+"Dickenson County",,,"3,412","3,355",639,2,4,3,0,0,"7,415"
+"Dinwiddie County",,,"1,451","1,551","2,245",4,2,4,0,0,"5,257"
+"Emporia City",,,812,657,716,2,2,2,0,0,"2,191"
+"Essex County",,,791,897,468,2,2,4,0,0,"2,164"
+"Fairfax County",,,"57,462","44,796","14,805",54,186,16,0,0,"117,319"
+"Fairfax City",,,"2,963","2,153",959,0,7,2,0,0,"6,084"
+"Falls Church City",,,"2,005","1,860",504,1,11,1,0,0,"4,382"
+"Fauquier County",,,"2,845","2,099","1,536",6,11,4,0,0,"6,501"
+"Floyd County",,,"2,275",715,537,2,6,2,0,0,"3,537"
+"Fluvanna County",,,913,569,660,3,0,0,0,0,"2,145"
+"Franklin County",,,"3,036","2,025","3,219",10,9,9,0,0,"8,308"
+"Franklin City",,,951,792,511,0,2,0,0,0,"2,256"
+"Frederick County",,,"3,696","1,612","2,137",1,6,2,0,0,"7,454"
+"Fredericksburg City",,,"2,142","2,036",878,4,6,2,0,0,"5,068"
+"Galax City",,,"1,257",748,304,0,0,0,0,0,"2,309"
+"Giles County",,,"2,722","2,045","1,372",123,10,5,0,0,"6,277"
+"Gloucester County",,,"1,619","1,210","1,526",3,4,2,0,0,"4,364"
+"Goochland County",,,"1,216","1,389",836,13,4,3,0,0,"3,461"
+"Grayson County",,,"3,563","1,926","1,090",4,3,1,0,0,"6,587"
+"Greene County",,,856,255,433,5,0,0,0,0,"1,549"
+"Greensville County",,,529,"1,367","1,256",4,7,2,0,0,"3,165"
+"Halifax County",,,"2,634","2,199","4,235",9,17,8,0,0,"9,102"
+"Hampton City",,,"10,532","11,308","10,690",12,58,6,0,0,"32,606"
+"Hanover County",,,"5,425","2,079","3,330",7,4,2,0,0,"10,847"
+"Harrisonburg City",,,"2,859","1,036",453,1,2,1,0,0,"4,352"
+"Henrico County",,,"34,212","8,600","11,868",12,25,9,0,0,"54,726"
+"Henry County",,,"3,946","4,175","6,802",271,16,14,0,0,"15,224"
+"Highland County",,,619,284,166,0,0,0,0,0,"1,069"
+"Hopewell City",,,"2,942","1,568","2,092",132,5,4,0,0,"6,743"
+"Isle of Wight County",,,"1,312","1,977","2,328",9,7,2,0,0,"5,635"
+"James City County",,,"1,443","1,521","1,083",11,4,3,0,0,"4,065"
+"King and Queen County",,,568,882,614,3,4,2,0,0,"2,073"
+"King George County",,,829,730,632,1,1,2,0,0,"2,195"
+"King William County",,,"1,046",764,615,2,3,1,0,0,"2,431"
+"Lancaster County",,,"1,640","1,134",876,0,0,0,0,0,"3,650"
+"Lee County",,,"4,450","4,105",827,8,4,5,0,0,"9,399"
+"Lexington City",,,"1,170",734,177,0,4,0,0,0,"2,085"
+"Loudoun County",,,"4,577","3,262","2,117",0,12,2,0,0,"9,970"
+"Louisa County",,,"1,510","1,290","1,149",13,1,1,0,0,"3,964"
+"Lunenburg County",,,"1,181","1,180","1,630",13,6,2,0,0,"4,012"
+"Lynchburg City",,,"9,943","4,305","3,649",380,17,5,0,0,"18,299"
+"Madison County",,,"1,188",478,763,5,5,0,0,0,"2,439"
+"Martinsville City",,,"2,618","2,727","1,856",67,7,1,0,0,"7,276"
+"Mathews County",,,"1,309",691,773,2,1,1,0,0,"2,777"
+"Mecklenburg County",,,"2,750","2,667","4,022",28,7,4,0,0,"9,478"
+"Middlesex County",,,809,575,655,1,1,1,0,0,"2,042"
+"Montgomery County",,,"7,098","2,700","1,712",5,24,8,0,0,"11,547"
+"Nansemond County",,,"2,101","4,174","3,723",21,12,2,0,0,"10,033"
+"Nelson County",,,"1,130","1,120","1,163",9,1,3,0,0,"3,426"
+"New Kent County",,,526,765,609,1,1,2,0,0,"1,904"
+"Newport News City",,,"12,774","13,370","10,763",68,50,44,0,0,"37,069"
+"Norfolk City",,,"22,302","28,477","14,500",319,160,71,0,0,"65,829"
+"Northampton County",,,"1,410","1,418","1,129",9,7,1,0,0,"3,974"
+"Northumberland County",,,"1,438","1,077",968,1,6,2,0,0,"3,492"
+"Norton City",,,495,555,215,0,0,2,0,0,"1,267"
+"Nottoway County",,,"1,614","1,529","1,673",4,8,2,0,0,"4,830"
+"Orange County",,,"1,727",879,"1,050",1,3,1,0,0,"3,661"
+"Page County",,,"3,667","2,125",995,2,5,6,0,0,"6,800"
+"Patrick County",,,"2,187","1,105","1,974",4,2,3,0,0,"5,275"
+"Petersburg City",,,"3,478","5,519","2,158",4,8,2,0,0,"11,169"
+"Pittsylvania County",,,"5,096","5,427","9,302",30,21,14,0,0,"19,890"
+"Portsmouth City",,,"9,402","15,734","12,127",54,40,24,0,0,"37,381"
+"Powhatan County",,,722,"1,004",929,5,2,1,0,0,"2,663"
+"Prince Edward County",,,"1,857","1,567","1,224",4,8,6,0,0,"4,666"
+"Prince George County",,,"1,559","1,272","1,920",5,3,2,0,0,"4,761"
+"Prince William County",,,"7,944","5,566","5,160",5,8,3,0,0,"18,686"
+"Pulaski County",,,"4,409","2,497","1,346",8,4,1,0,0,"8,265"
+"Radford City",,,"2,077","1,206",461,1,3,1,0,0,"3,749"
+"Rappahannock County",,,594,394,372,0,2,1,0,0,"1,363"
+"Richmond County",,,"1,011",490,563,3,2,0,0,0,"2,069"
+"Richmond City",,,"26,380","32,857","7,325",13,85,8,0,0,"66,668"
+"Roanoke County",,,"12,439","3,902","4,745",14,14,10,0,0,"21,124"
+"Roanoke City",,,"15,368","9,281","5,269",24,47,19,0,0,"30,008"
+"Rockbridge County",,,"2,280",845,885,1,3,0,0,0,"4,014"
+"Rockingham County",,,"7,779","2,111","1,817",2,5,1,0,0,"11,715"
+"Russell County",,,"3,858","3,554","1,369",85,4,2,0,0,"8,872"
+"Salem City",,,"3,955","1,369","1,507",6,6,3,0,0,"6,846"
+"Scott County",,,"5,345","3,144","1,474",12,3,6,0,0,"9,984"
+"Shenandoah County",,,"5,461","1,654",0,0,5,0,0,0,"7,120"
+"Smyth County",,,"5,297","2,631","1,808",9,3,3,0,0,"9,751"
+"S. Boston City",,,"1,298",620,662,1,3,3,0,0,"2,587"
+"Southampton County",,,"1,376","1,803","2,070",2,9,2,0,0,"5,262"
+"Spotsylvania County",,,"1,675","1,647","1,589",5,7,3,0,0,"4,926"
+"Stafford County",,,"2,572","1,698","2,197",3,11,1,0,0,"6,482"
+"Staunton City",,,"4,434","1,729","1,054",0,4,0,0,0,"7,221"
+"Suffolk City",,,"1,277","1,044","1,039",2,3,0,0,0,"3,365"
+"Surry County",,,523,"1,126",708,3,4,2,0,0,"2,366"
+"Sussex County",,,"1,105","1,541","1,135",2,8,3,0,0,"3,794"
+"Tazewell County",,,"4,434","4,734","2,023",134,9,4,0,0,"11,338"
+"Virginia Beach City",,,"16,316","10,101","10,962",284,53,26,0,0,"37,742"
+"Warren County",,,"2,297","1,513","1,479",4,3,0,0,0,"5,296"
+"Washington County",,,"6,665","3,243","3,092",16,7,6,0,0,"13,029"
+"Waynesboro City",,,"3,301","1,446",613,4,7,7,0,0,"5,378"
+"Westmoreland County",,,"1,402","1,156",943,2,2,1,0,0,"3,506"
+"Williamsburg City",,,"1,156",991,247,16,60,4,0,0,"2,474"
+"Winchester City",,,"2,695","1,360",770,2,4,2,0,0,"4,833"
+"Wise County",,,"5,004","5,942","1,635",7,10,8,0,0,"12,606"
+"Wythe County",,,"3,638","1,765","1,377",168,10,5,0,0,"6,963"
+"York County",,,"3,356","2,370","3,330",17,12,3,0,0,"9,088"
+TOTALS,,,"590,319","442,387","320,272","4,671","1,680",601,0,0,"1,359,930"
